@@ -1,0 +1,82 @@
+:root {
+    --main-color: white;
+    --width: 50%;
+    --blur: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #0c1b40;
+    height: 100vh;
+}
+
+h1 {
+    position: relative;
+}
+
+h1::after {
+    background-color: white;
+    content: "";
+    display: block;
+    width: 53%;
+    height: 3px;
+    position: absolute;
+    top: 50px;
+    left: 1px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+h1:hover::after {
+    width: 100%;
+}
+
+.header {
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.control span {
+    color: var(--main-color);
+    font-size: 24px;
+    margin: 10px;
+}
+
+.control > div {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content .image {
+    width: var(--width);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.content .image img {
+    border: 4px solid var(--main-color);
+    width: 100%;
+    filter: blur(var(--blur));
+    -webkit-filter: blur(var(--blur));
+}
+
+#color {
+    margin-top: 13px;
+}
