@@ -21,7 +21,7 @@ h1 {
 }
 
 h1::after {
-    background-color: white;
+    background-color: var(--main-color);
     content: "";
     display: block;
     width: 53%;
